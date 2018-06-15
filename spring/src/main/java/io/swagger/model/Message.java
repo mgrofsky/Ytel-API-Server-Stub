@@ -14,7 +14,7 @@ import javax.validation.constraints.*;
  * Message
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-15T17:00:45.154Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-15T17:00:57.956Z")
 
 public class Message   {
   @JsonProperty("ApiVersion")
