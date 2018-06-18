@@ -12,8 +12,8 @@ To see how to make this your own, look here:
 
 [README](https://github.com/swagger-api/swagger-codegen/blob/master/README.md)
 
-- API version: 3.0
-- Build date: 2018-06-15T17:00:41.589Z
+- API version: 3.11
+- Build date: 2018-06-18T20:11:11.222Z
 
 
 ### Running the server
