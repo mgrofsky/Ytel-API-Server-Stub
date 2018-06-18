@@ -2,7 +2,7 @@
 swagger: "2.0"
 info:
   description: "Ytel API version 3"
-  version: "3.0"
+  version: "3.11"
   title: "Ytel API V3"
 host: "api.message360.com"
 basePath: "/api/v3/"
