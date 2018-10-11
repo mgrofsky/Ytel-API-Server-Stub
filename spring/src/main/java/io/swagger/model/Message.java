@@ -14,7 +14,7 @@ import javax.validation.constraints.*;
  * Message
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 public class Message   {
   @JsonProperty("ApiVersion")
@@ -52,7 +52,7 @@ public class Message   {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return apiVersion
   **/
@@ -73,7 +73,7 @@ public class Message   {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return messageSid
   **/
@@ -94,7 +94,7 @@ public class Message   {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return from
   **/
@@ -115,7 +115,7 @@ public class Message   {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return to
   **/
@@ -136,7 +136,7 @@ public class Message   {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return messagePrice
   **/
@@ -157,7 +157,7 @@ public class Message   {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return body
   **/
@@ -178,7 +178,7 @@ public class Message   {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return dateSent
   **/
@@ -199,7 +199,7 @@ public class Message   {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return status
   **/
@@ -220,7 +220,7 @@ public class Message   {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return templateId
   **/
@@ -241,7 +241,7 @@ public class Message   {
     return this;
   }
 
-   /**
+  /**
    * Get templateData
    * @return templateData
   **/

@@ -24,7 +24,7 @@ class TestAreaMailController(BaseTestCase):
                     targettype='targettype_example',
                     htmldata='htmldata_example')
         response = self.client.open(
-            '/api/v3//areamail/create.json',
+            '/api/v3/areamail/create.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -38,7 +38,7 @@ class TestAreaMailController(BaseTestCase):
         """
         data = dict(areamailid='areamailid_example')
         response = self.client.open(
-            '/api/v3//areamail/delete.json',
+            '/api/v3/areamail/delete.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -55,7 +55,7 @@ class TestAreaMailController(BaseTestCase):
                     areamailsid='areamailsid_example',
                     dateCreated='dateCreated_example')
         response = self.client.open(
-            '/api/v3//areamail/lists.json',
+            '/api/v3/areamail/lists.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -69,7 +69,7 @@ class TestAreaMailController(BaseTestCase):
         """
         data = dict(areamailid='areamailid_example')
         response = self.client.open(
-            '/api/v3//areamail/view.json',
+            '/api/v3/areamail/view.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

@@ -10,7 +10,7 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Configuration
 public class SwaggerDocumentationConfig {
@@ -22,7 +22,7 @@ public class SwaggerDocumentationConfig {
             .license("")
             .licenseUrl("http://unlicense.org")
             .termsOfServiceUrl("")
-            .version("3.11")
+            .version("3.12")
             .contact(new Contact("","", ""))
             .build();
     }

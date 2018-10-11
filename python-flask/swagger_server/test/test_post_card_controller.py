@@ -26,7 +26,7 @@ class TestPostCardController(BaseTestCase):
                     description='description_example',
                     htmldata='htmldata_example')
         response = self.client.open(
-            '/api/v3//Postcard/createpostcard.json',
+            '/api/v3/Postcard/createpostcard.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -40,7 +40,7 @@ class TestPostCardController(BaseTestCase):
         """
         data = dict(postcardid='postcardid_example')
         response = self.client.open(
-            '/api/v3//Postcard/deletepostcard.json',
+            '/api/v3/Postcard/deletepostcard.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -57,7 +57,7 @@ class TestPostCardController(BaseTestCase):
                     postcardid='postcardid_example',
                     dateCreated='dateCreated_example')
         response = self.client.open(
-            '/api/v3//Postcard/listpostcard.json',
+            '/api/v3/Postcard/listpostcard.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -71,7 +71,7 @@ class TestPostCardController(BaseTestCase):
         """
         data = dict(postcardid='postcardid_example')
         response = self.client.open(
-            '/api/v3//Postcard/viewpostcard.json',
+            '/api/v3/Postcard/viewpostcard.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

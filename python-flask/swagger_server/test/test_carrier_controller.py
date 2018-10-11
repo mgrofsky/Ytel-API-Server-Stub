@@ -18,7 +18,7 @@ class TestCarrierController(BaseTestCase):
         """
         data = dict(PhoneNumber='PhoneNumber_example')
         response = self.client.open(
-            '/api/v3//carrier/lookup.json',
+            '/api/v3/carrier/lookup.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -33,7 +33,7 @@ class TestCarrierController(BaseTestCase):
         data = dict(Page=1,
                     PageSize=10)
         response = self.client.open(
-            '/api/v3//carrier/lookuplist.json',
+            '/api/v3/carrier/lookuplist.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

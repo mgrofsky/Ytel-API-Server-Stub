@@ -84,7 +84,7 @@ def shortcode_sendsms(shortcode, to, templateid, data, Method=None, MessageStatu
     :param to: A valid 10-digit number that should receive the message
     :type to: str
     :param templateid: The unique identifier for the template used for the message
-    :type templateid: str
+    :type templateid: dict | bytes
     :param data: format of your data, example: {companyname}:test,{otpcode}:1234
     :type data: str
     :param Method: Specifies the HTTP method used to request the required URL once the Short Code message is sent.
@@ -94,6 +94,8 @@ def shortcode_sendsms(shortcode, to, templateid, data, Method=None, MessageStatu
 
     :rtype: str
     """
+    if connexion.request.is_json:
+        templateid = .from_dict(connexion.request.get_json())  # noqa: E501
     return 'do some magic!'
 
 
@@ -158,8 +160,10 @@ def template_view(TemplateId):  # noqa: E501
     View a Shared ShortCode Template # noqa: E501
 
     :param TemplateId: The unique identifier for a template object
-    :type TemplateId: str
+    :type TemplateId: dict | bytes
 
     :rtype: str
     """
+    if connexion.request.is_json:
+        TemplateId = .from_dict(connexion.request.get_json())  # noqa: E501
     return 'do some magic!'

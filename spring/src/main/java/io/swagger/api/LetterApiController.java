@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class LetterApiController implements LetterApi {
@@ -36,7 +36,7 @@ public class LetterApiController implements LetterApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> letterCreate(@ApiParam(value = "The AddressId or an object structured when creating an address by addresses/Create.", required=true) @RequestPart(value="to", required=true)  String to,@ApiParam(value = "The AddressId or an object structured when creating an address by addresses/Create.", required=true) @RequestPart(value="from", required=true)  String from,@ApiParam(value = "Set an existing letter by attaching its LetterId.", required=true) @RequestPart(value="attachbyid", required=true)  String attachbyid,@ApiParam(value = "File can be a 8.5\"x11\" PDF uploaded file or URL that links to a file.", required=true) @RequestPart(value="file", required=true)  String file,@ApiParam(value = "Specify if letter should be printed in color.", required=true) @RequestPart(value="color", required=true)  String color,@ApiParam(value = "A description for the letter.") @RequestPart(value="description", required=false)  String description,@ApiParam(value = "Add an extra service to your letter. Options are \"certified\" or \"registered\". Certified provides tracking and delivery confirmation for domestic destinations and is an additional $5.00. Registered provides tracking and confirmation for international addresses and is an additional $16.50.") @RequestPart(value="extraservice", required=false)  String extraservice,@ApiParam(value = "Specify if letter should be printed on both sides.") @RequestPart(value="doublesided", required=false)  String doublesided,@ApiParam(value = "Boolean that defaults to true. When set to false, this specifies that your letter does not follow the m360 address template. In this case, a blank address page will be inserted at the beginning of your file and you will be charged for the extra page.") @RequestPart(value="template", required=false)  String template,@ApiParam(value = "A string value that contains HTML markup.") @RequestPart(value="htmldata", required=false)  String htmldata) {
+    public ResponseEntity<String> letterCreate(@ApiParam(value = "The AddressId or an object structured when creating an address by addresses/Create.", required=true) @RequestParam(value="to", required=true)  String to,@ApiParam(value = "The AddressId or an object structured when creating an address by addresses/Create.", required=true) @RequestParam(value="from", required=true)  String from,@ApiParam(value = "Set an existing letter by attaching its LetterId.", required=true) @RequestParam(value="attachbyid", required=true)  String attachbyid,@ApiParam(value = "File can be a 8.5\"x11\" PDF uploaded file or URL that links to a file.", required=true) @RequestParam(value="file", required=true)  String file,@ApiParam(value = "Specify if letter should be printed in color.", required=true) @RequestParam(value="color", required=true)  String color,@ApiParam(value = "A description for the letter.") @RequestParam(value="description", required=false)  String description,@ApiParam(value = "Add an extra service to your letter. Options are \"certified\" or \"registered\". Certified provides tracking and delivery confirmation for domestic destinations and is an additional $5.00. Registered provides tracking and confirmation for international addresses and is an additional $16.50.") @RequestParam(value="extraservice", required=false)  String extraservice,@ApiParam(value = "Specify if letter should be printed on both sides.") @RequestParam(value="doublesided", required=false)  String doublesided,@ApiParam(value = "Boolean that defaults to true. When set to false, this specifies that your letter does not follow the m360 address template. In this case, a blank address page will be inserted at the beginning of your file and you will be charged for the extra page.") @RequestParam(value="template", required=false)  String template,@ApiParam(value = "A string value that contains HTML markup.") @RequestParam(value="htmldata", required=false)  String htmldata) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -50,7 +50,7 @@ public class LetterApiController implements LetterApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> letterDelete(@ApiParam(value = "The unique identifier for a letter object.", required=true) @RequestPart(value="lettersid", required=true)  String lettersid) {
+    public ResponseEntity<String> letterDelete(@ApiParam(value = "The unique identifier for a letter object.", required=true) @RequestParam(value="lettersid", required=true)  String lettersid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -64,7 +64,7 @@ public class LetterApiController implements LetterApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> letterListsletter(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestPart(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "The unique identifier for a letter object.") @RequestPart(value="lettersid", required=false)  String lettersid,@ApiParam(value = "The date the letter was created.") @RequestPart(value="dateCreated", required=false)  String dateCreated) {
+    public ResponseEntity<String> letterListsletter(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestParam(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "The unique identifier for a letter object.") @RequestParam(value="lettersid", required=false)  String lettersid,@ApiParam(value = "The date the letter was created.") @RequestParam(value="dateCreated", required=false)  String dateCreated) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -78,7 +78,7 @@ public class LetterApiController implements LetterApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> letterViewletter(@ApiParam(value = "The unique identifier for a letter object.", required=true) @RequestPart(value="lettersid", required=true)  String lettersid) {
+    public ResponseEntity<String> letterViewletter(@ApiParam(value = "The unique identifier for a letter object.", required=true) @RequestParam(value="lettersid", required=true)  String lettersid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {

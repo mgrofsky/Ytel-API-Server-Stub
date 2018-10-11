@@ -18,7 +18,7 @@ class TestAccountController(BaseTestCase):
         """
         data = dict(Date='Date_example')
         response = self.client.open(
-            '/api/v3//accounts/viewaccount.json',
+            '/api/v3/accounts/viewaccount.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

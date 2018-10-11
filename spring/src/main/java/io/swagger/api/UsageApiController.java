@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class UsageApiController implements UsageApi {
@@ -36,7 +36,7 @@ public class UsageApiController implements UsageApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> usageListusage(@ApiParam(value = "Filter usage results by product type.", allowableValues="0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13", defaultValue="0") @RequestPart(value="ProductCode", required=false)  String productCode,@ApiParam(value = "Filter usage objects by start date.", defaultValue="2016-09-06") @RequestPart(value="startDate", required=false)  String startDate,@ApiParam(value = "Filter usage objects by end date.", defaultValue="2016-09-06") @RequestPart(value="endDate", required=false)  String endDate,@ApiParam(value = "Will include all subaccount usage data") @RequestPart(value="IncludeSubAccounts", required=false)  String includeSubAccounts) {
+    public ResponseEntity<String> usageListusage(@ApiParam(value = "Filter usage results by product type.", allowableValues="0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13", defaultValue="0") @RequestParam(value="ProductCode", required=false)  String productCode,@ApiParam(value = "Filter usage objects by start date.", defaultValue="2016-09-06") @RequestParam(value="startDate", required=false)  String startDate,@ApiParam(value = "Filter usage objects by end date.", defaultValue="2016-09-06") @RequestParam(value="endDate", required=false)  String endDate,@ApiParam(value = "Will include all subaccount usage data") @RequestParam(value="IncludeSubAccounts", required=false)  String includeSubAccounts) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {

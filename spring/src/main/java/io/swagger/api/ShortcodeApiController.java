@@ -20,7 +20,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class ShortcodeApiController implements ShortcodeApi {
@@ -37,7 +37,7 @@ public class ShortcodeApiController implements ShortcodeApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> shortcodeGetinboundsms(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="page", required=false)  Integer page,@ApiParam(value = "Number of individual resources listed in the response per page", defaultValue="10") @RequestPart(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "From Number to Inbound ShortCode") @RequestPart(value="from", required=false)  String from,@ApiParam(value = "Only list messages sent to this Short Code") @RequestPart(value="Shortcode", required=false)  String shortcode,@ApiParam(value = "Only list messages sent with the specified date") @Valid @RequestParam(value = "Datecreated", required = false) String datecreated) {
+    public ResponseEntity<String> shortcodeGetinboundsms(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="page", required=false)  Integer page,@ApiParam(value = "Number of individual resources listed in the response per page", defaultValue="10") @RequestParam(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "From Number to Inbound ShortCode") @RequestParam(value="from", required=false)  String from,@ApiParam(value = "Only list messages sent to this Short Code") @RequestParam(value="Shortcode", required=false)  String shortcode,@ApiParam(value = "Only list messages sent with the specified date") @Valid @RequestParam(value = "Datecreated", required = false) String datecreated) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -51,7 +51,7 @@ public class ShortcodeApiController implements ShortcodeApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> shortcodeListshortcode(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="page", required=false)  Integer page,@ApiParam(value = "Number of individual resources listed in the response per page", defaultValue="10") @RequestPart(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "Only list keywords of shortcode") @Valid @RequestParam(value = "Shortcode", required = false) String shortcode) {
+    public ResponseEntity<String> shortcodeListshortcode(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="page", required=false)  Integer page,@ApiParam(value = "Number of individual resources listed in the response per page", defaultValue="10") @RequestParam(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "Only list keywords of shortcode") @Valid @RequestParam(value = "Shortcode", required = false) String shortcode) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -65,7 +65,7 @@ public class ShortcodeApiController implements ShortcodeApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> shortcodeListsms(@ApiParam(value = "Only list messages sent from this Short Code") @RequestPart(value="Shortcode", required=false)  String shortcode,@ApiParam(value = "Only list messages sent to this number") @RequestPart(value="To", required=false)  String to,@ApiParam(value = "Only list messages sent with the specified date") @RequestPart(value="DateSent", required=false)  String dateSent,@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="Page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestPart(value="PageSize", required=false)  Integer pageSize) {
+    public ResponseEntity<String> shortcodeListsms(@ApiParam(value = "Only list messages sent from this Short Code") @RequestParam(value="Shortcode", required=false)  String shortcode,@ApiParam(value = "Only list messages sent to this number") @RequestParam(value="To", required=false)  String to,@ApiParam(value = "Only list messages sent with the specified date") @RequestParam(value="DateSent", required=false)  String dateSent,@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="Page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestParam(value="PageSize", required=false)  Integer pageSize) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -79,7 +79,7 @@ public class ShortcodeApiController implements ShortcodeApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> shortcodeSendsms(@ApiParam(value = "The Short Code number that is the sender of this message", required=true) @RequestPart(value="shortcode", required=true)  String shortcode,@ApiParam(value = "A valid 10-digit number that should receive the message", required=true) @RequestPart(value="to", required=true)  String to,@ApiParam(value = "The unique identifier for the template used for the message", required=true) @RequestPart(value="templateid", required=true)  UUID templateid,@ApiParam(value = "format of your data, example: {companyname}:test,{otpcode}:1234", required=true) @RequestPart(value="data", required=true)  String data,@ApiParam(value = "Specifies the HTTP method used to request the required URL once the Short Code message is sent.", defaultValue="GET") @RequestPart(value="Method", required=false)  String method,@ApiParam(value = "URL that can be requested to receive notification when Short Code message was sent.") @RequestPart(value="MessageStatusCallback", required=false)  String messageStatusCallback) {
+    public ResponseEntity<String> shortcodeSendsms(@ApiParam(value = "The Short Code number that is the sender of this message", required=true) @RequestParam(value="shortcode", required=true)  String shortcode,@ApiParam(value = "A valid 10-digit number that should receive the message", required=true) @RequestParam(value="to", required=true)  String to,@ApiParam(value = "The unique identifier for the template used for the message", required=true) @RequestParam(value="templateid", required=true)  UUID templateid,@ApiParam(value = "format of your data, example: {companyname}:test,{otpcode}:1234", required=true) @RequestParam(value="data", required=true)  String data,@ApiParam(value = "Specifies the HTTP method used to request the required URL once the Short Code message is sent.", defaultValue="GET") @RequestParam(value="Method", required=false)  String method,@ApiParam(value = "URL that can be requested to receive notification when Short Code message was sent.") @RequestParam(value="MessageStatusCallback", required=false)  String messageStatusCallback) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -93,7 +93,7 @@ public class ShortcodeApiController implements ShortcodeApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> shortcodeUpdateshortcode(@ApiParam(value = "List of valid shortcode to your Ytel account", required=true) @RequestPart(value="Shortcode", required=true)  String shortcode,@ApiParam(value = "User generated name of the shortcode") @RequestPart(value="FriendlyName", required=false)  String friendlyName,@ApiParam(value = "URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished.") @RequestPart(value="CallbackUrl", required=false)  String callbackUrl,@ApiParam(value = "Specifies the HTTP method used to request the required StatusCallBackUrl once call connects.") @RequestPart(value="CallbackMethod", required=false)  String callbackMethod,@ApiParam(value = "URL used if any errors occur during execution of InboundXML or at initial request of the required Url provided with the POST.") @RequestPart(value="FallbackUrl", required=false)  String fallbackUrl,@ApiParam(value = "Specifies the HTTP method used to request the required FallbackUrl once call connects.") @RequestPart(value="FallbackUrlMethod", required=false)  String fallbackUrlMethod) {
+    public ResponseEntity<String> shortcodeUpdateshortcode(@ApiParam(value = "List of valid shortcode to your Ytel account", required=true) @RequestParam(value="Shortcode", required=true)  String shortcode,@ApiParam(value = "User generated name of the shortcode") @RequestParam(value="FriendlyName", required=false)  String friendlyName,@ApiParam(value = "URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished.") @RequestParam(value="CallbackUrl", required=false)  String callbackUrl,@ApiParam(value = "Specifies the HTTP method used to request the required StatusCallBackUrl once call connects.") @RequestParam(value="CallbackMethod", required=false)  String callbackMethod,@ApiParam(value = "URL used if any errors occur during execution of InboundXML or at initial request of the required Url provided with the POST.") @RequestParam(value="FallbackUrl", required=false)  String fallbackUrl,@ApiParam(value = "Specifies the HTTP method used to request the required FallbackUrl once call connects.") @RequestParam(value="FallbackUrlMethod", required=false)  String fallbackUrlMethod) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -107,7 +107,7 @@ public class ShortcodeApiController implements ShortcodeApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> shortcodeViewshortcode(@ApiParam(value = "List of valid Shortcode to your Ytel account", required=true) @RequestPart(value="Shortcode", required=true)  String shortcode) {
+    public ResponseEntity<String> shortcodeViewshortcode(@ApiParam(value = "List of valid Shortcode to your Ytel account", required=true) @RequestParam(value="Shortcode", required=true)  String shortcode) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -121,7 +121,7 @@ public class ShortcodeApiController implements ShortcodeApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> shortcodeViewsms(@ApiParam(value = "The unique identifier for the sms resource", required=true) @RequestPart(value="MessageSid", required=true)  String messageSid) {
+    public ResponseEntity<String> shortcodeViewsms(@ApiParam(value = "The unique identifier for the sms resource", required=true) @RequestParam(value="MessageSid", required=true)  String messageSid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {

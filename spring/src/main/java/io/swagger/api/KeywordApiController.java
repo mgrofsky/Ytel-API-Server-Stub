@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class KeywordApiController implements KeywordApi {
@@ -36,7 +36,7 @@ public class KeywordApiController implements KeywordApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> keywordLists(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="page", required=false)  Integer page,@ApiParam(value = "Number of individual resources listed in the response per page", defaultValue="10") @RequestPart(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "Only list keywords of keyword") @RequestPart(value="Keyword", required=false)  String keyword,@ApiParam(value = "Only list keywords of shortcode") @RequestPart(value="Shortcode", required=false)  Integer shortcode) {
+    public ResponseEntity<String> keywordLists(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="page", required=false)  Integer page,@ApiParam(value = "Number of individual resources listed in the response per page", defaultValue="10") @RequestParam(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "Only list keywords of keyword") @RequestParam(value="Keyword", required=false)  String keyword,@ApiParam(value = "Only list keywords of shortcode") @RequestParam(value="Shortcode", required=false)  Integer shortcode) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -50,7 +50,7 @@ public class KeywordApiController implements KeywordApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> keywordView(@ApiParam(value = "The unique identifier of each keyword", required=true) @RequestPart(value="Keywordid", required=true)  String keywordid) {
+    public ResponseEntity<String> keywordView(@ApiParam(value = "The unique identifier of each keyword", required=true) @RequestParam(value="Keywordid", required=true)  String keywordid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {

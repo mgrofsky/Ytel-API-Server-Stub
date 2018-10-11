@@ -27,7 +27,7 @@ class TestLetterController(BaseTestCase):
                     template='template_example',
                     htmldata='htmldata_example')
         response = self.client.open(
-            '/api/v3//letter/create.json',
+            '/api/v3/letter/create.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -41,7 +41,7 @@ class TestLetterController(BaseTestCase):
         """
         data = dict(lettersid='lettersid_example')
         response = self.client.open(
-            '/api/v3//letter/delete.json',
+            '/api/v3/letter/delete.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -58,7 +58,7 @@ class TestLetterController(BaseTestCase):
                     lettersid='lettersid_example',
                     dateCreated='dateCreated_example')
         response = self.client.open(
-            '/api/v3//letter/listsletter.json',
+            '/api/v3/letter/listsletter.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -72,7 +72,7 @@ class TestLetterController(BaseTestCase):
         """
         data = dict(lettersid='lettersid_example')
         response = self.client.open(
-            '/api/v3//letter/viewletter.json',
+            '/api/v3/letter/viewletter.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

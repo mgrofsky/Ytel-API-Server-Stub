@@ -21,7 +21,7 @@ class TestUsageController(BaseTestCase):
                     endDate='2016-09-06',
                     IncludeSubAccounts='IncludeSubAccounts_example')
         response = self.client.open(
-            '/api/v3//usage/listusage.json',
+            '/api/v3/usage/listusage.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

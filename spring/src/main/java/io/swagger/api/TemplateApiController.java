@@ -20,7 +20,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class TemplateApiController implements TemplateApi {
@@ -37,7 +37,7 @@ public class TemplateApiController implements TemplateApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> templateLists(@ApiParam(value = "The type (category) of template Valid values: marketing, authorization", defaultValue="authorization") @RequestPart(value="type", required=false)  String type,@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestPart(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "Only list templates of type") @RequestPart(value="Shortcode", required=false)  String shortcode) {
+    public ResponseEntity<String> templateLists(@ApiParam(value = "The type (category) of template Valid values: marketing, authorization", defaultValue="authorization") @RequestParam(value="type", required=false)  String type,@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestParam(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "Only list templates of type") @RequestParam(value="Shortcode", required=false)  String shortcode) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -51,7 +51,7 @@ public class TemplateApiController implements TemplateApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> templateView(@ApiParam(value = "The unique identifier for a template object", required=true) @RequestPart(value="TemplateId", required=true)  UUID templateId) {
+    public ResponseEntity<String> templateView(@ApiParam(value = "The unique identifier for a template object", required=true) @RequestParam(value="TemplateId", required=true)  UUID templateId) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
