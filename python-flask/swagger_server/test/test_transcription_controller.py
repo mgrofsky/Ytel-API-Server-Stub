@@ -18,7 +18,7 @@ class TestTranscriptionController(BaseTestCase):
         """
         data = dict(audiourl='audiourl_example')
         response = self.client.open(
-            '/api/v3//transcriptions/audiourltranscription.json',
+            '/api/v3/transcriptions/audiourltranscription.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -35,7 +35,7 @@ class TestTranscriptionController(BaseTestCase):
                     status='status_example',
                     dateTranscribed='dateTranscribed_example')
         response = self.client.open(
-            '/api/v3//transcriptions/listtranscription.json',
+            '/api/v3/transcriptions/listtranscription.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -49,7 +49,7 @@ class TestTranscriptionController(BaseTestCase):
         """
         data = dict(recordingSid='recordingSid_example')
         response = self.client.open(
-            '/api/v3//transcriptions/recordingtranscription.json',
+            '/api/v3/transcriptions/recordingtranscription.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -63,7 +63,7 @@ class TestTranscriptionController(BaseTestCase):
         """
         data = dict(transcriptionsid='transcriptionsid_example')
         response = self.client.open(
-            '/api/v3//transcriptions/viewtranscription.json',
+            '/api/v3/transcriptions/viewtranscription.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

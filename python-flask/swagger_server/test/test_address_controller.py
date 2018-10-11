@@ -26,7 +26,7 @@ class TestAddressController(BaseTestCase):
                     email='email_example',
                     Phone='Phone_example')
         response = self.client.open(
-            '/api/v3//address/createaddress.json',
+            '/api/v3/address/createaddress.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -40,7 +40,7 @@ class TestAddressController(BaseTestCase):
         """
         data = dict(addressid='addressid_example')
         response = self.client.open(
-            '/api/v3//address/deleteaddress.json',
+            '/api/v3/address/deleteaddress.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -57,7 +57,7 @@ class TestAddressController(BaseTestCase):
                     addressid='addressid_example',
                     dateCreated='dateCreated_example')
         response = self.client.open(
-            '/api/v3//address/listaddress.json',
+            '/api/v3/address/listaddress.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -71,7 +71,7 @@ class TestAddressController(BaseTestCase):
         """
         data = dict(addressid='addressid_example')
         response = self.client.open(
-            '/api/v3//address/verifyaddress.json',
+            '/api/v3/address/verifyaddress.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -85,7 +85,7 @@ class TestAddressController(BaseTestCase):
         """
         data = dict(addressid='addressid_example')
         response = self.client.open(
-            '/api/v3//address/viewaddress.json',
+            '/api/v3/address/viewaddress.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

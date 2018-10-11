@@ -18,7 +18,7 @@ class TestEmailController(BaseTestCase):
         """
         data = dict(email='email_example')
         response = self.client.open(
-            '/api/v3//email/addunsubscribesemail.json',
+            '/api/v3/email/addunsubscribesemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -32,7 +32,7 @@ class TestEmailController(BaseTestCase):
         """
         data = dict(Email='Email_example')
         response = self.client.open(
-            '/api/v3//email/deleteblocksemail.json',
+            '/api/v3/email/deleteblocksemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -46,7 +46,7 @@ class TestEmailController(BaseTestCase):
         """
         data = dict(Email='Email_example')
         response = self.client.open(
-            '/api/v3//email/deletebouncesemail.json',
+            '/api/v3/email/deletebouncesemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -60,7 +60,7 @@ class TestEmailController(BaseTestCase):
         """
         data = dict(Email='Email_example')
         response = self.client.open(
-            '/api/v3//email/deleteinvalidemail.json',
+            '/api/v3/email/deleteinvalidemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -74,7 +74,7 @@ class TestEmailController(BaseTestCase):
         """
         data = dict(Email='Email_example')
         response = self.client.open(
-            '/api/v3//email/deletespamemail.json',
+            '/api/v3/email/deletespamemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -88,7 +88,7 @@ class TestEmailController(BaseTestCase):
         """
         data = dict(email='email_example')
         response = self.client.open(
-            '/api/v3//email/deleteunsubscribedemail.json',
+            '/api/v3/email/deleteunsubscribedemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -103,7 +103,7 @@ class TestEmailController(BaseTestCase):
         data = dict(Offset='Offset_example',
                     Limit='Limit_example')
         response = self.client.open(
-            '/api/v3//email/listblockemail.json',
+            '/api/v3/email/listblockemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -118,7 +118,7 @@ class TestEmailController(BaseTestCase):
         data = dict(Offset='Offset_example',
                     Limit='Limit_example')
         response = self.client.open(
-            '/api/v3//email/listbounceemail.json',
+            '/api/v3/email/listbounceemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -133,7 +133,7 @@ class TestEmailController(BaseTestCase):
         data = dict(Offset='Offset_example',
                     Limit='Limit_example')
         response = self.client.open(
-            '/api/v3//email/listinvalidemail.json',
+            '/api/v3/email/listinvalidemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -148,7 +148,7 @@ class TestEmailController(BaseTestCase):
         data = dict(Offset='Offset_example',
                     Limit='Limit_example')
         response = self.client.open(
-            '/api/v3//email/listspamemail.json',
+            '/api/v3/email/listspamemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -163,7 +163,7 @@ class TestEmailController(BaseTestCase):
         data = dict(Offset='Offset_example',
                     Limit='Limit_example')
         response = self.client.open(
-            '/api/v3//email/listunsubscribedemail.json',
+            '/api/v3/email/listunsubscribedemail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -184,7 +184,7 @@ class TestEmailController(BaseTestCase):
                     Bcc='Bcc_example',
                     Attachment='Attachment_example')
         response = self.client.open(
-            '/api/v3//email/sendemails.json',
+            '/api/v3/email/sendemails.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

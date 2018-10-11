@@ -20,7 +20,7 @@ class TestPhoneNumberController(BaseTestCase):
                     areacode='areacode_example',
                     pagesize=10)
         response = self.client.open(
-            '/api/v3//incomingphone/availablenumber.json',
+            '/api/v3/incomingphone/availablenumber.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -37,7 +37,7 @@ class TestPhoneNumberController(BaseTestCase):
                     Quantity='Quantity_example',
                     Leftover='Leftover_example')
         response = self.client.open(
-            '/api/v3//incomingphone/bulkbuy.json',
+            '/api/v3/incomingphone/bulkbuy.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -51,7 +51,7 @@ class TestPhoneNumberController(BaseTestCase):
         """
         data = dict(PhoneNumber='PhoneNumber_example')
         response = self.client.open(
-            '/api/v3//incomingphone/buynumber.json',
+            '/api/v3/incomingphone/buynumber.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -65,7 +65,7 @@ class TestPhoneNumberController(BaseTestCase):
         """
         data = dict(Phonenumber='Phonenumber_example')
         response = self.client.open(
-            '/api/v3//incomingphone/getdidscore.json',
+            '/api/v3/incomingphone/getdidscore.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -82,7 +82,7 @@ class TestPhoneNumberController(BaseTestCase):
                     NumberType='NumberType_example',
                     FriendlyName='FriendlyName_example')
         response = self.client.open(
-            '/api/v3//incomingphone/listnumber.json',
+            '/api/v3/incomingphone/listnumber.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -96,7 +96,7 @@ class TestPhoneNumberController(BaseTestCase):
         """
         data = dict(PhoneNumber='PhoneNumber_example')
         response = self.client.open(
-            '/api/v3//incomingphone/massreleasenumber.json',
+            '/api/v3/incomingphone/massreleasenumber.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -123,7 +123,7 @@ class TestPhoneNumberController(BaseTestCase):
                     SmsFallbackUrl='SmsFallbackUrl_example',
                     SmsFallbackMethod='SmsFallbackMethod_example')
         response = self.client.open(
-            '/api/v3//incomingphone/massupdatenumber.json',
+            '/api/v3/incomingphone/massupdatenumber.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -137,7 +137,7 @@ class TestPhoneNumberController(BaseTestCase):
         """
         data = dict(PhoneNumber='PhoneNumber_example')
         response = self.client.open(
-            '/api/v3//incomingphone/releasenumber.{ResponseType}'.format(ResponseType='ResponseType_example'),
+            '/api/v3/incomingphone/releasenumber.{ResponseType}'.format(ResponseType='ResponseType_example'),
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -153,7 +153,7 @@ class TestPhoneNumberController(BaseTestCase):
                     fromaccountsid='fromaccountsid_example',
                     toaccountsid='toaccountsid_example')
         response = self.client.open(
-            '/api/v3//incomingphone/transferphonenumbers.json',
+            '/api/v3/incomingphone/transferphonenumbers.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -180,7 +180,7 @@ class TestPhoneNumberController(BaseTestCase):
                     SmsFallbackUrl='SmsFallbackUrl_example',
                     SmsFallbackMethod='SmsFallbackMethod_example')
         response = self.client.open(
-            '/api/v3//incomingphone/updatenumber.json',
+            '/api/v3/incomingphone/updatenumber.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -194,7 +194,7 @@ class TestPhoneNumberController(BaseTestCase):
         """
         data = dict(PhoneNumber='PhoneNumber_example')
         response = self.client.open(
-            '/api/v3//incomingphone/viewnumber.json',
+            '/api/v3/incomingphone/viewnumber.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

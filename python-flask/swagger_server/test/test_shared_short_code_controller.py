@@ -21,7 +21,7 @@ class TestSharedShortCodeController(BaseTestCase):
                     Keyword='Keyword_example',
                     Shortcode=56)
         response = self.client.open(
-            '/api/v3//keyword/lists.json',
+            '/api/v3/keyword/lists.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -35,7 +35,7 @@ class TestSharedShortCodeController(BaseTestCase):
         """
         data = dict(Keywordid='Keywordid_example')
         response = self.client.open(
-            '/api/v3//keyword/view.json',
+            '/api/v3/keyword/view.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -53,7 +53,7 @@ class TestSharedShortCodeController(BaseTestCase):
                     _from='_from_example',
                     Shortcode='Shortcode_example')
         response = self.client.open(
-            '/api/v3//shortcode/getinboundsms.json',
+            '/api/v3/shortcode/getinboundsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded',
@@ -70,7 +70,7 @@ class TestSharedShortCodeController(BaseTestCase):
         data = dict(page=1,
                     pagesize=10)
         response = self.client.open(
-            '/api/v3//shortcode/listshortcode.json',
+            '/api/v3/shortcode/listshortcode.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded',
@@ -90,7 +90,7 @@ class TestSharedShortCodeController(BaseTestCase):
                     Method='GET',
                     MessageStatusCallback='MessageStatusCallback_example')
         response = self.client.open(
-            '/api/v3//shortcode/sendsms.json',
+            '/api/v3/shortcode/sendsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -109,7 +109,7 @@ class TestSharedShortCodeController(BaseTestCase):
                     FallbackUrl='FallbackUrl_example',
                     FallbackUrlMethod='FallbackUrlMethod_example')
         response = self.client.open(
-            '/api/v3//shortcode/updateshortcode.json',
+            '/api/v3/shortcode/updateshortcode.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -123,7 +123,7 @@ class TestSharedShortCodeController(BaseTestCase):
         """
         data = dict(Shortcode='Shortcode_example')
         response = self.client.open(
-            '/api/v3//shortcode/viewshortcode.json',
+            '/api/v3/shortcode/viewshortcode.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -140,7 +140,7 @@ class TestSharedShortCodeController(BaseTestCase):
                     pagesize=10,
                     Shortcode='Shortcode_example')
         response = self.client.open(
-            '/api/v3//template/lists.json',
+            '/api/v3/template/lists.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -154,7 +154,7 @@ class TestSharedShortCodeController(BaseTestCase):
         """
         data = dict(TemplateId='TemplateId_example')
         response = self.client.open(
-            '/api/v3//template/view.json',
+            '/api/v3/template/view.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

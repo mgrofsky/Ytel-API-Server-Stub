@@ -18,7 +18,7 @@ class TestRecordingController(BaseTestCase):
         """
         data = dict(recordingsid='recordingsid_example')
         response = self.client.open(
-            '/api/v3//recording/deleterecording.json',
+            '/api/v3/recording/deleterecording.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -35,7 +35,7 @@ class TestRecordingController(BaseTestCase):
                     Datecreated='Datecreated_example',
                     callsid='callsid_example')
         response = self.client.open(
-            '/api/v3//recording/listrecording.json',
+            '/api/v3/recording/listrecording.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -49,7 +49,7 @@ class TestRecordingController(BaseTestCase):
         """
         data = dict(recordingsid='recordingsid_example')
         response = self.client.open(
-            '/api/v3//recording/viewrecording.json',
+            '/api/v3/recording/viewrecording.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

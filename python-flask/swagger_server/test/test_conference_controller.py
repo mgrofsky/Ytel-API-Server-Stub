@@ -21,7 +21,7 @@ class TestConferenceController(BaseTestCase):
                     Muted=true,
                     Deaf=true)
         response = self.client.open(
-            '/api/v3//conferences/addParticipant.json',
+            '/api/v3/conferences/addParticipant.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -47,7 +47,7 @@ class TestConferenceController(BaseTestCase):
                     ScheduleTime='ScheduleTime_example',
                     Timeout=56)
         response = self.client.open(
-            '/api/v3//conferences/createConference.json',
+            '/api/v3/conferences/createConference.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded',
@@ -65,7 +65,7 @@ class TestConferenceController(BaseTestCase):
                     Muted=true,
                     Deaf=true)
         response = self.client.open(
-            '/api/v3//conferences/deafMuteParticipant.json',
+            '/api/v3/conferences/deafMuteParticipant.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -80,7 +80,7 @@ class TestConferenceController(BaseTestCase):
         query_string = [('ParticipantSid', 'ParticipantSid_example')]
         data = dict(ConferenceSid='ConferenceSid_example')
         response = self.client.open(
-            '/api/v3//conferences/hangupParticipant.json',
+            '/api/v3/conferences/hangupParticipant.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded',
@@ -99,7 +99,7 @@ class TestConferenceController(BaseTestCase):
                     Muted=true,
                     Deaf=true)
         response = self.client.open(
-            '/api/v3//conferences/listParticipant.json',
+            '/api/v3/conferences/listParticipant.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -116,7 +116,7 @@ class TestConferenceController(BaseTestCase):
                     FriendlyName='FriendlyName_example',
                     DateCreated='DateCreated_example')
         response = self.client.open(
-            '/api/v3//conferences/listconference.json',
+            '/api/v3/conferences/listconference.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -132,7 +132,7 @@ class TestConferenceController(BaseTestCase):
                     ParticipantSid='ParticipantSid_example',
                     AudioUrl='AudioUrl_example')
         response = self.client.open(
-            '/api/v3//conferences/playAudio.json',
+            '/api/v3/conferences/playAudio.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -147,7 +147,7 @@ class TestConferenceController(BaseTestCase):
         data = dict(ConferenceSid='ConferenceSid_example',
                     ParticipantSid='ParticipantSid_example')
         response = self.client.open(
-            '/api/v3//conferences/viewParticipant.json',
+            '/api/v3/conferences/viewParticipant.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -161,7 +161,7 @@ class TestConferenceController(BaseTestCase):
         """
         data = dict(ConferenceSid='ConferenceSid_example')
         response = self.client.open(
-            '/api/v3//conferences/viewconference.json',
+            '/api/v3/conferences/viewconference.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

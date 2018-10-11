@@ -22,7 +22,7 @@ class TestSMSController(BaseTestCase):
                     To='To_example',
                     DateSent='DateSent_example')
         response = self.client.open(
-            '/api/v3//sms/getinboundsms.json',
+            '/api/v3/sms/getinboundsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -40,7 +40,7 @@ class TestSMSController(BaseTestCase):
                     To='To_example',
                     DateSent='DateSent_example')
         response = self.client.open(
-            '/api/v3//sms/listsms.json',
+            '/api/v3/sms/listsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -60,7 +60,7 @@ class TestSMSController(BaseTestCase):
                     Smartsms=false,
                     DeliveryStatus=false)
         response = self.client.open(
-            '/api/v3//sms/sendsms.json',
+            '/api/v3/sms/sendsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -74,7 +74,7 @@ class TestSMSController(BaseTestCase):
         """
         data = dict(MessageSid='MessageSid_example')
         response = self.client.open(
-            '/api/v3//sms/viewdetailsms.json',
+            '/api/v3/sms/viewdetailsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -88,7 +88,7 @@ class TestSMSController(BaseTestCase):
         """
         data = dict(MessageSid='MessageSid_example')
         response = self.client.open(
-            '/api/v3//sms/viewsms.json',
+            '/api/v3/sms/viewsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

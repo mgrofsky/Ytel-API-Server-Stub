@@ -22,7 +22,7 @@ class TestSubAccountController(BaseTestCase):
                     FriendlyName='FriendlyName_example',
                     Password='Password_example')
         response = self.client.open(
-            '/api/v3//user/createsubaccount.json',
+            '/api/v3/user/createsubaccount.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -37,7 +37,7 @@ class TestSubAccountController(BaseTestCase):
         data = dict(SubAccountSID='SubAccountSID_example',
                     MergeNumber='MergeNumber_example')
         response = self.client.open(
-            '/api/v3//user/deletesubaccount.json',
+            '/api/v3/user/deletesubaccount.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -52,7 +52,7 @@ class TestSubAccountController(BaseTestCase):
         data = dict(SubAccountSID='SubAccountSID_example',
                     Activate='Activate_example')
         response = self.client.open(
-            '/api/v3//user/subaccountactivation.json',
+            '/api/v3/user/subaccountactivation.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

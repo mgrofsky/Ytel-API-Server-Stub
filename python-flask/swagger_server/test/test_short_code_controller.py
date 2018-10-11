@@ -22,7 +22,7 @@ class TestShortCodeController(BaseTestCase):
                     Shortcode='Shortcode_example',
                     Datecreated='Datecreated_example')
         response = self.client.open(
-            '/api/v3//dedicatedshortcode/getinboundsms.json',
+            '/api/v3/dedicatedshortcode/getinboundsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -38,7 +38,7 @@ class TestShortCodeController(BaseTestCase):
                     page='page_example',
                     pagesize='pagesize_example')
         response = self.client.open(
-            '/api/v3//dedicatedshortcode/listshortcode.json',
+            '/api/v3/dedicatedshortcode/listshortcode.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -56,7 +56,7 @@ class TestShortCodeController(BaseTestCase):
                     method='method_example',
                     messagestatuscallback='messagestatuscallback_example')
         response = self.client.open(
-            '/api/v3//dedicatedshortcode/sendsms.json',
+            '/api/v3/dedicatedshortcode/sendsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -75,7 +75,7 @@ class TestShortCodeController(BaseTestCase):
                     FallbackMethod='FallbackMethod_example',
                     FallbackUrl='FallbackUrl_example')
         response = self.client.open(
-            '/api/v3//dedicatedshortcode/updateshortcode.json',
+            '/api/v3/dedicatedshortcode/updateshortcode.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -89,7 +89,7 @@ class TestShortCodeController(BaseTestCase):
         """
         data = dict(Shortcode='Shortcode_example')
         response = self.client.open(
-            '/api/v3//dedicatedshortcode/viewshortcode.json',
+            '/api/v3/dedicatedshortcode/viewshortcode.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -107,7 +107,7 @@ class TestShortCodeController(BaseTestCase):
                     Page=1,
                     PageSize=10)
         response = self.client.open(
-            '/api/v3//shortcode/listsms.json',
+            '/api/v3/shortcode/listsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -121,7 +121,7 @@ class TestShortCodeController(BaseTestCase):
         """
         data = dict(MessageSid='MessageSid_example')
         response = self.client.open(
-            '/api/v3//shortcode/viewsms.json',
+            '/api/v3/shortcode/viewsms.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')

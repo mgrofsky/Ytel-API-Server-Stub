@@ -37,7 +37,7 @@ class TestCallController(BaseTestCase):
                     Transcribe=true,
                     TranscribeCallBackUrl='TranscribeCallBackUrl_example')
         response = self.client.open(
-            '/api/v3//calls/groupcall.json',
+            '/api/v3/calls/groupcall.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -54,7 +54,7 @@ class TestCallController(BaseTestCase):
                     Method='Method_example',
                     Status='Status_example')
         response = self.client.open(
-            '/api/v3//calls/interruptcalls.json',
+            '/api/v3/calls/interruptcalls.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -72,7 +72,7 @@ class TestCallController(BaseTestCase):
                     From='From_example',
                     DateCreated='DateCreated_example')
         response = self.client.open(
-            '/api/v3//calls/listcalls.json',
+            '/api/v3/calls/listcalls.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -108,7 +108,7 @@ class TestCallController(BaseTestCase):
                     Feedback=true,
                     SurveyId='SurveyId_example')
         response = self.client.open(
-            '/api/v3//calls/makecall.json',
+            '/api/v3/calls/makecall.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -128,7 +128,7 @@ class TestCallController(BaseTestCase):
                     StatusCallBackUrl='StatusCallBackUrl_example',
                     StatsCallBackMethod='StatsCallBackMethod_example')
         response = self.client.open(
-            '/api/v3//calls/makervm.json',
+            '/api/v3/calls/makervm.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -147,7 +147,7 @@ class TestCallController(BaseTestCase):
                     Direction='Direction_example',
                     Mix=true)
         response = self.client.open(
-            '/api/v3//calls/playaudios.json',
+            '/api/v3/calls/playaudios.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -166,7 +166,7 @@ class TestCallController(BaseTestCase):
                     CallBackUrl='CallBackUrl_example',
                     Fileformat='Fileformat_example')
         response = self.client.open(
-            '/api/v3//calls/recordcalls.json',
+            '/api/v3/calls/recordcalls.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -182,7 +182,7 @@ class TestCallController(BaseTestCase):
                     PlayDtmf='PlayDtmf_example',
                     PlayDtmfDirection='PlayDtmfDirection_example')
         response = self.client.open(
-            '/api/v3//calls/senddigits.json',
+            '/api/v3/calls/senddigits.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -196,7 +196,7 @@ class TestCallController(BaseTestCase):
         """
         data = dict(callSid='callSid_example')
         response = self.client.open(
-            '/api/v3//calls/viewcalldetail.json',
+            '/api/v3/calls/viewcalldetail.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -210,7 +210,7 @@ class TestCallController(BaseTestCase):
         """
         data = dict(callsid='callsid_example')
         response = self.client.open(
-            '/api/v3//calls/viewcalls.json',
+            '/api/v3/calls/viewcalls.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
@@ -230,7 +230,7 @@ class TestCallController(BaseTestCase):
                     Rate=1.2,
                     Tempo=1.2)
         response = self.client.open(
-            '/api/v3//calls/voiceeffect.json',
+            '/api/v3/calls/voiceeffect.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
