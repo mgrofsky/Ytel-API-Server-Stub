@@ -1,4 +1,4 @@
-# Go API Server for 
+# Go API Server for swagger
 
 Ytel API version 3
 
@@ -12,8 +12,8 @@ To see how to make this your own, look here:
 
 [README](https://github.com/swagger-api/swagger-codegen/blob/master/README.md)
 
-- API version: 3.11
-- Build date: 2018-06-18T20:11:11.222Z
+- API version: 3.12
+- Build date: 2018-10-11T03:45:34.554Z
 
 
 ### Running the server
