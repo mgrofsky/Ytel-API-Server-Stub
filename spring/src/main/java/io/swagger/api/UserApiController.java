@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class UserApiController implements UserApi {
@@ -36,7 +36,7 @@ public class UserApiController implements UserApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> userCreatesubaccount(@ApiParam(value = "Sub account user first name", required=true) @RequestPart(value="FirstName", required=true)  String firstName,@ApiParam(value = "sub account user last name", required=true) @RequestPart(value="LastName", required=true)  String lastName,@ApiParam(value = "Sub account email address", required=true) @RequestPart(value="Email", required=true)  String email,@ApiParam(value = "Descriptive name of the sub account", required=true) @RequestPart(value="FriendlyName", required=true)  String friendlyName,@ApiParam(value = "The password of the sub account.  Please make sure to make as password that is at least 8 characters long, contain a symbol, uppercase and a number.", required=true) @RequestPart(value="Password", required=true)  String password) {
+    public ResponseEntity<String> userCreatesubaccount(@ApiParam(value = "Sub account user first name", required=true) @RequestParam(value="FirstName", required=true)  String firstName,@ApiParam(value = "sub account user last name", required=true) @RequestParam(value="LastName", required=true)  String lastName,@ApiParam(value = "Sub account email address", required=true) @RequestParam(value="Email", required=true)  String email,@ApiParam(value = "Descriptive name of the sub account", required=true) @RequestParam(value="FriendlyName", required=true)  String friendlyName,@ApiParam(value = "The password of the sub account.  Please make sure to make as password that is at least 8 characters long, contain a symbol, uppercase and a number.", required=true) @RequestParam(value="Password", required=true)  String password) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -50,7 +50,7 @@ public class UserApiController implements UserApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> userDeletesubaccount(@ApiParam(value = "The SubaccountSid to be deleted", required=true) @RequestPart(value="SubAccountSID", required=true)  String subAccountSID,@ApiParam(value = "0 to delete or 1 to merge numbers to parent account.", required=true, allowableValues="0, 1") @RequestPart(value="MergeNumber", required=true)  String mergeNumber) {
+    public ResponseEntity<String> userDeletesubaccount(@ApiParam(value = "The SubaccountSid to be deleted", required=true) @RequestParam(value="SubAccountSID", required=true)  String subAccountSID,@ApiParam(value = "0 to delete or 1 to merge numbers to parent account.", required=true, allowableValues="0, 1") @RequestParam(value="MergeNumber", required=true)  String mergeNumber) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -64,7 +64,7 @@ public class UserApiController implements UserApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> userSubaccountactivation(@ApiParam(value = "The SubaccountSid to be activated or suspended", required=true) @RequestPart(value="SubAccountSID", required=true)  String subAccountSID,@ApiParam(value = "0 to suspend or 1 to activate", required=true, allowableValues="1, 0") @RequestPart(value="Activate", required=true)  String activate) {
+    public ResponseEntity<String> userSubaccountactivation(@ApiParam(value = "The SubaccountSid to be activated or suspended", required=true) @RequestParam(value="SubAccountSID", required=true)  String subAccountSID,@ApiParam(value = "0 to suspend or 1 to activate", required=true, allowableValues="1, 0") @RequestParam(value="Activate", required=true)  String activate) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {

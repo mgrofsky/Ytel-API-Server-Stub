@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class AccountsApiController implements AccountsApi {
@@ -36,7 +36,7 @@ public class AccountsApiController implements AccountsApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> accountsViewaccount(@ApiParam(value = "Filter account information based on date.", required=true) @RequestPart(value="Date", required=true)  String date) {
+    public ResponseEntity<String> accountsViewaccount(@ApiParam(value = "Filter account information based on date.", required=true) @RequestParam(value="Date", required=true)  String date) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {

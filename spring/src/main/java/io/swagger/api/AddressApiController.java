@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class AddressApiController implements AddressApi {
@@ -36,7 +36,7 @@ public class AddressApiController implements AddressApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> addressCreateaddress(@ApiParam(value = "Name of user", required=true) @RequestPart(value="Name", required=true)  String name,@ApiParam(value = "Address of user.", required=true) @RequestPart(value="Address", required=true)  String address,@ApiParam(value = "Must be a 2 letter country short-name code (ISO 3166)", required=true) @RequestPart(value="Country", required=true)  String country,@ApiParam(value = "Must be a 2 letter State eg. CA for US. For Some Countries it can be greater than 2 letters.", required=true) @RequestPart(value="State", required=true)  String state,@ApiParam(value = "City Name.", required=true) @RequestPart(value="City", required=true)  String city,@ApiParam(value = "Zip code of city.", required=true) @RequestPart(value="Zip", required=true)  String zip,@ApiParam(value = "Description of addresses.") @RequestPart(value="Description", required=false)  String description,@ApiParam(value = "Email Id of user.") @RequestPart(value="email", required=false)  String email,@ApiParam(value = "Phone number of user.") @RequestPart(value="Phone", required=false)  String phone) {
+    public ResponseEntity<String> addressCreateaddress(@ApiParam(value = "Name of user", required=true) @RequestParam(value="Name", required=true)  String name,@ApiParam(value = "Address of user.", required=true) @RequestParam(value="Address", required=true)  String address,@ApiParam(value = "Must be a 2 letter country short-name code (ISO 3166)", required=true) @RequestParam(value="Country", required=true)  String country,@ApiParam(value = "Must be a 2 letter State eg. CA for US. For Some Countries it can be greater than 2 letters.", required=true) @RequestParam(value="State", required=true)  String state,@ApiParam(value = "City Name.", required=true) @RequestParam(value="City", required=true)  String city,@ApiParam(value = "Zip code of city.", required=true) @RequestParam(value="Zip", required=true)  String zip,@ApiParam(value = "Description of addresses.") @RequestParam(value="Description", required=false)  String description,@ApiParam(value = "Email Id of user.") @RequestParam(value="email", required=false)  String email,@ApiParam(value = "Phone number of user.") @RequestParam(value="Phone", required=false)  String phone) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -50,7 +50,7 @@ public class AddressApiController implements AddressApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> addressDeleteaddress(@ApiParam(value = "The identifier of the address to be deleted.", required=true) @RequestPart(value="addressid", required=true)  String addressid) {
+    public ResponseEntity<String> addressDeleteaddress(@ApiParam(value = "The identifier of the address to be deleted.", required=true) @RequestParam(value="addressid", required=true)  String addressid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -64,7 +64,7 @@ public class AddressApiController implements AddressApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> addressListaddress(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="page", required=false)  Integer page,@ApiParam(value = "How many results to return, default is 10, max is 100, must be an integer", defaultValue="10") @RequestPart(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "addresses Sid") @RequestPart(value="addressid", required=false)  String addressid,@ApiParam(value = "date created address.") @RequestPart(value="dateCreated", required=false)  String dateCreated) {
+    public ResponseEntity<String> addressListaddress(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="page", required=false)  Integer page,@ApiParam(value = "How many results to return, default is 10, max is 100, must be an integer", defaultValue="10") @RequestParam(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "addresses Sid") @RequestParam(value="addressid", required=false)  String addressid,@ApiParam(value = "date created address.") @RequestParam(value="dateCreated", required=false)  String dateCreated) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -78,7 +78,7 @@ public class AddressApiController implements AddressApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> addressVerifyaddress(@ApiParam(value = "The identifier of the address to be verified.", required=true) @RequestPart(value="addressid", required=true)  String addressid) {
+    public ResponseEntity<String> addressVerifyaddress(@ApiParam(value = "The identifier of the address to be verified.", required=true) @RequestParam(value="addressid", required=true)  String addressid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -92,7 +92,7 @@ public class AddressApiController implements AddressApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> addressViewaddress(@ApiParam(value = "The identifier of the address to be retrieved.", required=true) @RequestPart(value="addressid", required=true)  String addressid) {
+    public ResponseEntity<String> addressViewaddress(@ApiParam(value = "The identifier of the address to be retrieved.", required=true) @RequestParam(value="addressid", required=true)  String addressid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {

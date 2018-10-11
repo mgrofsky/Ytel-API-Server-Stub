@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class DedicatedshortcodeApiController implements DedicatedshortcodeApi {
@@ -36,7 +36,7 @@ public class DedicatedshortcodeApiController implements DedicatedshortcodeApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> dedicatedshortcodeGetinboundsms(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="page", required=false)  Integer page,@ApiParam(value = "Number of individual resources listed in the response per page", defaultValue="10") @RequestPart(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "Only list SMS messages sent from this number") @RequestPart(value="From", required=false)  String from,@ApiParam(value = "Only list SMS messages sent to Shortcode") @RequestPart(value="Shortcode", required=false)  String shortcode,@ApiParam(value = "Only list SMS messages sent in the specified date MAKE REQUEST") @RequestPart(value="Datecreated", required=false)  String datecreated) {
+    public ResponseEntity<String> dedicatedshortcodeGetinboundsms(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="page", required=false)  Integer page,@ApiParam(value = "Number of individual resources listed in the response per page", defaultValue="10") @RequestParam(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "Only list SMS messages sent from this number") @RequestParam(value="From", required=false)  String from,@ApiParam(value = "Only list SMS messages sent to Shortcode") @RequestParam(value="Shortcode", required=false)  String shortcode,@ApiParam(value = "Only list SMS messages sent in the specified date MAKE REQUEST") @RequestParam(value="Datecreated", required=false)  String datecreated) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -50,7 +50,7 @@ public class DedicatedshortcodeApiController implements DedicatedshortcodeApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> dedicatedshortcodeListshortcode(@ApiParam(value = "Only list Short Code Assignment sent from this Short Code") @RequestPart(value="Shortcode", required=false)  String shortcode,@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.") @RequestPart(value="page", required=false)  String page,@ApiParam(value = "The count of objects to return per page.") @RequestPart(value="pagesize", required=false)  String pagesize) {
+    public ResponseEntity<String> dedicatedshortcodeListshortcode(@ApiParam(value = "Only list Short Code Assignment sent from this Short Code") @RequestParam(value="Shortcode", required=false)  String shortcode,@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.") @RequestParam(value="page", required=false)  String page,@ApiParam(value = "The count of objects to return per page.") @RequestParam(value="pagesize", required=false)  String pagesize) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -64,7 +64,7 @@ public class DedicatedshortcodeApiController implements DedicatedshortcodeApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> dedicatedshortcodeSendsms(@ApiParam(value = "Your dedicated shortcode", required=true) @RequestPart(value="shortcode", required=true)  Integer shortcode,@ApiParam(value = "The number to send your SMS to", required=true) @RequestPart(value="to", required=true)  Double to,@ApiParam(value = "The body of your message", required=true) @RequestPart(value="body", required=true)  String body,@ApiParam(value = "Specifies the HTTP method used to request the required URL once the Short Code message is sent.GET or POST") @RequestPart(value="method", required=false)  String method,@ApiParam(value = "URL that can be requested to receive notification when Short Code message was sent.") @RequestPart(value="messagestatuscallback", required=false)  String messagestatuscallback) {
+    public ResponseEntity<String> dedicatedshortcodeSendsms(@ApiParam(value = "Your dedicated shortcode", required=true) @RequestParam(value="shortcode", required=true)  Integer shortcode,@ApiParam(value = "The number to send your SMS to", required=true) @RequestParam(value="to", required=true)  Double to,@ApiParam(value = "The body of your message", required=true) @RequestParam(value="body", required=true)  String body,@ApiParam(value = "Specifies the HTTP method used to request the required URL once the Short Code message is sent.GET or POST") @RequestParam(value="method", required=false)  String method,@ApiParam(value = "URL that can be requested to receive notification when Short Code message was sent.") @RequestParam(value="messagestatuscallback", required=false)  String messagestatuscallback) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -78,7 +78,7 @@ public class DedicatedshortcodeApiController implements DedicatedshortcodeApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> dedicatedshortcodeUpdateshortcode(@ApiParam(value = "List of valid dedicated shortcode to your Ytel account.", required=true) @RequestPart(value="Shortcode", required=true)  String shortcode,@ApiParam(value = "User generated name of the dedicated shortcode.") @RequestPart(value="FriendlyName", required=false)  String friendlyName,@ApiParam(value = "Specifies the HTTP method used to request the required StatusCallBackUrl once call connects.") @RequestPart(value="CallbackMethod", required=false)  String callbackMethod,@ApiParam(value = "URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished.") @RequestPart(value="CallbackUrl", required=false)  String callbackUrl,@ApiParam(value = "Specifies the HTTP method used to request the required FallbackUrl once call connects.") @RequestPart(value="FallbackMethod", required=false)  String fallbackMethod,@ApiParam(value = "URL used if any errors occur during execution of InboundXML or at initial request of the required Url provided with the POST.") @RequestPart(value="FallbackUrl", required=false)  String fallbackUrl) {
+    public ResponseEntity<String> dedicatedshortcodeUpdateshortcode(@ApiParam(value = "List of valid dedicated shortcode to your Ytel account.", required=true) @RequestParam(value="Shortcode", required=true)  String shortcode,@ApiParam(value = "User generated name of the dedicated shortcode.") @RequestParam(value="FriendlyName", required=false)  String friendlyName,@ApiParam(value = "Specifies the HTTP method used to request the required StatusCallBackUrl once call connects.") @RequestParam(value="CallbackMethod", required=false)  String callbackMethod,@ApiParam(value = "URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished.") @RequestParam(value="CallbackUrl", required=false)  String callbackUrl,@ApiParam(value = "Specifies the HTTP method used to request the required FallbackUrl once call connects.") @RequestParam(value="FallbackMethod", required=false)  String fallbackMethod,@ApiParam(value = "URL used if any errors occur during execution of InboundXML or at initial request of the required Url provided with the POST.") @RequestParam(value="FallbackUrl", required=false)  String fallbackUrl) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -92,7 +92,7 @@ public class DedicatedshortcodeApiController implements DedicatedshortcodeApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> dedicatedshortcodeViewshortcode(@ApiParam(value = "List of valid Dedicated Short Code to your Ytel account", required=true) @RequestPart(value="Shortcode", required=true)  String shortcode) {
+    public ResponseEntity<String> dedicatedshortcodeViewshortcode(@ApiParam(value = "List of valid Dedicated Short Code to your Ytel account", required=true) @RequestParam(value="Shortcode", required=true)  String shortcode) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {

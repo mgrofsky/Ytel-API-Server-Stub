@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class TranscriptionsApiController implements TranscriptionsApi {
@@ -36,7 +36,7 @@ public class TranscriptionsApiController implements TranscriptionsApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> transcriptionsAudiourltranscription(@ApiParam(value = "URL pointing to the location of the audio file that is to be transcribed.", required=true) @RequestPart(value="audiourl", required=true)  String audiourl) {
+    public ResponseEntity<String> transcriptionsAudiourltranscription(@ApiParam(value = "URL pointing to the location of the audio file that is to be transcribed.", required=true) @RequestParam(value="audiourl", required=true)  String audiourl) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -50,7 +50,7 @@ public class TranscriptionsApiController implements TranscriptionsApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> transcriptionsListtranscription(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestPart(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "The state of the transcription.", allowableValues="inprogress, success, failure") @RequestPart(value="status", required=false)  String status,@ApiParam(value = "The date the transcription took place.") @RequestPart(value="dateTranscribed", required=false)  String dateTranscribed) {
+    public ResponseEntity<String> transcriptionsListtranscription(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestParam(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "The state of the transcription.", allowableValues="inprogress, success, failure") @RequestParam(value="status", required=false)  String status,@ApiParam(value = "The date the transcription took place.") @RequestParam(value="dateTranscribed", required=false)  String dateTranscribed) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -64,7 +64,7 @@ public class TranscriptionsApiController implements TranscriptionsApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> transcriptionsRecordingtranscription(@ApiParam(value = "The unique identifier for a recording object.", required=true) @RequestPart(value="recordingSid", required=true)  String recordingSid) {
+    public ResponseEntity<String> transcriptionsRecordingtranscription(@ApiParam(value = "The unique identifier for a recording object.", required=true) @RequestParam(value="recordingSid", required=true)  String recordingSid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -78,7 +78,7 @@ public class TranscriptionsApiController implements TranscriptionsApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> transcriptionsViewtranscription(@ApiParam(value = "The unique identifier for a transcription object.", required=true) @RequestPart(value="transcriptionsid", required=true)  String transcriptionsid) {
+    public ResponseEntity<String> transcriptionsViewtranscription(@ApiParam(value = "The unique identifier for a transcription object.", required=true) @RequestParam(value="transcriptionsid", required=true)  String transcriptionsid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {

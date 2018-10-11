@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class AreamailApiController implements AreamailApi {
@@ -36,7 +36,7 @@ public class AreamailApiController implements AreamailApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> areamailCreate(@ApiParam(value = "List of routes that AreaMail should be delivered to.  A single route can be either a zipcode or a carrier route.List of routes that AreaMail should be delivered to.  A single route can be either a zipcode or a carrier route. A carrier route is in the form of 92610-C043 where the carrier route is composed of 5 numbers for zipcode, 1 letter for carrier route type, and 3 numbers for carrier route code. Delivery can be sent to mutliple routes by separating them with a commas. Valid Values: 92656, 92610-C043", required=true) @RequestPart(value="routes", required=true)  String routes,@ApiParam(value = "Set an existing areamail by attaching its AreamailId.", required=true) @RequestPart(value="attachbyid", required=true)  String attachbyid,@ApiParam(value = "The front of the AreaMail item to be created. This can be a URL, local file, or an HTML string. Supported file types are PDF, PNG, and JPEG. Back required", required=true) @RequestPart(value="front", required=true)  String front,@ApiParam(value = "The back of the AreaMail item to be created. This can be a URL, local file, or an HTML string. Supported file types are PDF, PNG, and JPEG.", required=true) @RequestPart(value="back", required=true)  String back,@ApiParam(value = "A string value to use as a description for this AreaMail item.") @RequestPart(value="description", required=false)  String description,@ApiParam(value = "The delivery location type.") @RequestPart(value="targettype", required=false)  String targettype,@ApiParam(value = "A string value that contains HTML markup.") @RequestPart(value="htmldata", required=false)  String htmldata) {
+    public ResponseEntity<String> areamailCreate(@ApiParam(value = "List of routes that AreaMail should be delivered to.  A single route can be either a zipcode or a carrier route.List of routes that AreaMail should be delivered to.  A single route can be either a zipcode or a carrier route. A carrier route is in the form of 92610-C043 where the carrier route is composed of 5 numbers for zipcode, 1 letter for carrier route type, and 3 numbers for carrier route code. Delivery can be sent to mutliple routes by separating them with a commas. Valid Values: 92656, 92610-C043", required=true) @RequestParam(value="routes", required=true)  String routes,@ApiParam(value = "Set an existing areamail by attaching its AreamailId.", required=true) @RequestParam(value="attachbyid", required=true)  String attachbyid,@ApiParam(value = "The front of the AreaMail item to be created. This can be a URL, local file, or an HTML string. Supported file types are PDF, PNG, and JPEG. Back required", required=true) @RequestParam(value="front", required=true)  String front,@ApiParam(value = "The back of the AreaMail item to be created. This can be a URL, local file, or an HTML string. Supported file types are PDF, PNG, and JPEG.", required=true) @RequestParam(value="back", required=true)  String back,@ApiParam(value = "A string value to use as a description for this AreaMail item.") @RequestParam(value="description", required=false)  String description,@ApiParam(value = "The delivery location type.") @RequestParam(value="targettype", required=false)  String targettype,@ApiParam(value = "A string value that contains HTML markup.") @RequestParam(value="htmldata", required=false)  String htmldata) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -50,7 +50,7 @@ public class AreamailApiController implements AreamailApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> areamailDelete(@ApiParam(value = "The unique identifier for an AreaMail object.", required=true) @RequestPart(value="areamailid", required=true)  String areamailid) {
+    public ResponseEntity<String> areamailDelete(@ApiParam(value = "The unique identifier for an AreaMail object.", required=true) @RequestParam(value="areamailid", required=true)  String areamailid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -64,7 +64,7 @@ public class AreamailApiController implements AreamailApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> areamailLists(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestPart(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "The unique identifier for an AreaMail object.") @RequestPart(value="areamailsid", required=false)  String areamailsid,@ApiParam(value = "The date the AreaMail was created.") @RequestPart(value="dateCreated", required=false)  String dateCreated) {
+    public ResponseEntity<String> areamailLists(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestParam(value="pagesize", required=false)  Integer pagesize,@ApiParam(value = "The unique identifier for an AreaMail object.") @RequestParam(value="areamailsid", required=false)  String areamailsid,@ApiParam(value = "The date the AreaMail was created.") @RequestParam(value="dateCreated", required=false)  String dateCreated) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -78,7 +78,7 @@ public class AreamailApiController implements AreamailApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> areamailView(@ApiParam(value = "The unique identifier for an AreaMail object.", required=true) @RequestPart(value="areamailid", required=true)  String areamailid) {
+    public ResponseEntity<String> areamailView(@ApiParam(value = "The unique identifier for an AreaMail object.", required=true) @RequestParam(value="areamailid", required=true)  String areamailid) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {

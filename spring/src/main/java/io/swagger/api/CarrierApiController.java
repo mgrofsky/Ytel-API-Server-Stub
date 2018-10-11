@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-18T20:13:28.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
 
 @Controller
 public class CarrierApiController implements CarrierApi {
@@ -36,7 +36,7 @@ public class CarrierApiController implements CarrierApi {
         this.request = request;
     }
 
-    public ResponseEntity<String> carrierLookup(@ApiParam(value = "A valid 10-digit number (E.164 format).", required=true) @RequestPart(value="PhoneNumber", required=true)  String phoneNumber) {
+    public ResponseEntity<String> carrierLookup(@ApiParam(value = "A valid 10-digit number (E.164 format).", required=true) @RequestParam(value="PhoneNumber", required=true)  String phoneNumber) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
@@ -50,7 +50,7 @@ public class CarrierApiController implements CarrierApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> carrierLookuplist(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestPart(value="Page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestPart(value="PageSize", required=false)  Integer pageSize) {
+    public ResponseEntity<String> carrierLookuplist(@ApiParam(value = "The page count to retrieve from the total results in the collection. Page indexing starts at 1.", defaultValue="1") @RequestParam(value="Page", required=false)  Integer page,@ApiParam(value = "The count of objects to return per page.", defaultValue="10") @RequestParam(value="PageSize", required=false)  Integer pageSize) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
