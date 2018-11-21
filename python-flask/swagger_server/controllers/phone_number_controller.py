@@ -137,15 +137,13 @@ def incomingphone_massupdatenumber(PhoneNumber, VoiceUrl, FriendlyName=None, Voi
     return 'do some magic!'
 
 
-def incomingphone_releasenumber_by_response_type_post(PhoneNumber, ResponseType):  # noqa: E501
+def incomingphone_releasenumber_by_response_type_post(PhoneNumber):  # noqa: E501
     """Release Number
 
     Remove a purchased Ytel number from your account. # noqa: E501
 
     :param PhoneNumber: A valid 10-digit Ytel number (E.164 format).
     :type PhoneNumber: str
-    :param ResponseType: Response type format xml or json
-    :type ResponseType: str
 
     :rtype: str
     """

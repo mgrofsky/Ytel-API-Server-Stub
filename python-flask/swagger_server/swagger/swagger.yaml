@@ -433,11 +433,6 @@ paths:
         description: "A valid 10-digit Ytel number (E.164 format)."
         required: true
         type: "string"
-      - name: "ResponseType"
-        in: "path"
-        description: "Response type format xml or json"
-        required: true
-        type: "string"
       responses:
         200:
           description: ""

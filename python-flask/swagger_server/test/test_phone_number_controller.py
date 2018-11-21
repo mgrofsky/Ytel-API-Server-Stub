@@ -137,7 +137,7 @@ class TestPhoneNumberController(BaseTestCase):
         """
         data = dict(PhoneNumber='PhoneNumber_example')
         response = self.client.open(
-            '/api/v3/incomingphone/releasenumber.json'.format(ResponseType='ResponseType_example'),
+            '/api/v3/incomingphone/releasenumber.json',
             method='POST',
             data=data,
             content_type='application/x-www-form-urlencoded')
