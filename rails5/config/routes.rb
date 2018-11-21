@@ -70,7 +70,7 @@ Rails.application.routes.draw do
   add_swagger_route 'POST', '/api/v3/incomingphone/listnumber.json', controller_name: 'phoneNumber', action_name: 'incomingphone_listnumber'
   add_swagger_route 'POST', '/api/v3/incomingphone/massreleasenumber.json', controller_name: 'phoneNumber', action_name: 'incomingphone_massreleasenumber'
   add_swagger_route 'POST', '/api/v3/incomingphone/massupdatenumber.json', controller_name: 'phoneNumber', action_name: 'incomingphone_massupdatenumber'
-  add_swagger_route 'POST', '/api/v3/incomingphone/releasenumber.{ResponseType}', controller_name: 'phoneNumber', action_name: 'incomingphone_releasenumber_by_response_type_post'
+  add_swagger_route 'POST', '/api/v3/incomingphone/releasenumber.json', controller_name: 'phoneNumber', action_name: 'incomingphone_releasenumber_by_response_type_post'
   add_swagger_route 'POST', '/api/v3/incomingphone/transferphonenumbers.json', controller_name: 'phoneNumber', action_name: 'incomingphone_transferphonenumbers'
   add_swagger_route 'POST', '/api/v3/incomingphone/updatenumber.json', controller_name: 'phoneNumber', action_name: 'incomingphone_updatenumber'
   add_swagger_route 'POST', '/api/v3/incomingphone/viewnumber.json', controller_name: 'phoneNumber', action_name: 'incomingphone_viewnumber'
