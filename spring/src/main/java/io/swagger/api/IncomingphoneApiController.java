@@ -19,7 +19,7 @@ import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-11-21T17:51:00.851Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-11-21T18:17:51.171Z")
 
 @Controller
 public class IncomingphoneApiController implements IncomingphoneApi {
@@ -134,7 +134,7 @@ public class IncomingphoneApiController implements IncomingphoneApi {
         return new ResponseEntity<String>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<String> incomingphoneReleasenumberByResponseTypePost(@ApiParam(value = "A valid 10-digit Ytel number (E.164 format).", required=true) @RequestParam(value="PhoneNumber", required=true)  String phoneNumber,@ApiParam(value = "Response type format xml or json",required=true) @PathVariable("ResponseType") String responseType) {
+    public ResponseEntity<String> incomingphoneReleasenumberByResponseTypePost(@ApiParam(value = "A valid 10-digit Ytel number (E.164 format).", required=true) @RequestParam(value="PhoneNumber", required=true)  String phoneNumber) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("")) {
             try {
