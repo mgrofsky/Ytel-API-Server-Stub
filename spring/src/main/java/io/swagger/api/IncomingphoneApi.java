@@ -20,7 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-10-11T03:48:43.806Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-11-21T17:51:00.851Z")
 
 @Api(value = "incomingphone", description = "the incomingphone API")
 public interface IncomingphoneApi {
@@ -114,7 +114,7 @@ public interface IncomingphoneApi {
     }, tags={ "Phone Number", })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "", response = String.class) })
-    @RequestMapping(value = "/incomingphone/releasenumber.{ResponseType}",
+    @RequestMapping(value = "/incomingphone/releasenumber.json",
         produces = { "application/json" }, 
         consumes = { "application/x-www-form-urlencoded" },
         method = RequestMethod.POST)
