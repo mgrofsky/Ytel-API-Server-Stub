@@ -443,7 +443,7 @@ var routes = Routes{
 	Route{
 		"IncomingphoneReleasenumberByResponseTypePost",
 		strings.ToUpper("Post"),
-		"/api/v3/incomingphone/releasenumber.{ResponseType}",
+		"/api/v3/incomingphone/releasenumber.json",
 		IncomingphoneReleasenumberByResponseTypePost,
 	},
 

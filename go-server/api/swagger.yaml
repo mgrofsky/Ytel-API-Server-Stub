@@ -422,7 +422,7 @@ paths:
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
-  /incomingphone/releasenumber.{ResponseType}:
+  /incomingphone/releasenumber.json:
     post:
       tags:
       - "Phone Number"
@@ -440,12 +440,6 @@ paths:
         required: true
         type: "string"
         x-exportParamName: "PhoneNumber"
-      - name: "ResponseType"
-        in: "path"
-        description: "Response type format xml or json"
-        required: true
-        type: "string"
-        x-exportParamName: "ResponseType"
       responses:
         200:
           description: ""
