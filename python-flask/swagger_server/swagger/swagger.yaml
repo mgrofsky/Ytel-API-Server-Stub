@@ -416,7 +416,7 @@ paths:
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
       x-swagger-router-controller: "swagger_server.controllers.phone_number_controller"
-  /incomingphone/releasenumber.{ResponseType}:
+  /incomingphone/releasenumber.json:
     post:
       tags:
       - "Phone Number"
