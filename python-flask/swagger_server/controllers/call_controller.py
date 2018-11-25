@@ -241,7 +241,7 @@ def calls_senddigits(CallSid, PlayDtmf, PlayDtmfDirection=None):  # noqa: E501
 
 
 def calls_viewcalldetail(callSid):  # noqa: E501
-    """View Call
+    """View Call Details
 
     Retrieve a single voice call’s information by its CallSid. # noqa: E501
 

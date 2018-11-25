@@ -192,7 +192,7 @@ class TestCallController(BaseTestCase):
     def test_calls_viewcalldetail(self):
         """Test case for calls_viewcalldetail
 
-        View Call
+        View Call Details
         """
         data = dict(callSid='callSid_example')
         response = self.client.open(

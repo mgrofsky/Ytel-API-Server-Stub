@@ -2384,7 +2384,7 @@ paths:
       - auth: []
       x-unitTests: []
       x-operation-settings:
-        CollectParameters: true
+        CollectParameters: false
         AllowDynamicQueryParameters: false
         AllowDynamicFormParameters: false
         IsMultiContentStreaming: false
@@ -4051,7 +4051,7 @@ paths:
     post:
       tags:
       - "Call"
-      summary: "View Call"
+      summary: "View Call Details"
       description: "Retrieve a single voice call’s information by its CallSid."
       operationId: "calls_viewcalldetail"
       consumes:
