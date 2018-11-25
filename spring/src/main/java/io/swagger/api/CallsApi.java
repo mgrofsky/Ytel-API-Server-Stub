@@ -20,7 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-11-21T18:17:51.171Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-11-25T17:42:47.375Z")
 
 @Api(value = "calls", description = "the calls API")
 public interface CallsApi {
@@ -121,7 +121,7 @@ public interface CallsApi {
     ResponseEntity<String> callsSenddigits(@ApiParam(value = "The unique identifier of each call resource", required=true) @RequestParam(value="CallSid", required=true)  String callSid,@ApiParam(value = "DTMF digits to play to the call. 0-9, #, *, W, or w", required=true) @RequestParam(value="PlayDtmf", required=true)  String playDtmf,@ApiParam(value = "The leg of the call DTMF digits should be sent to", allowableValues="in, out, both") @RequestParam(value="PlayDtmfDirection", required=false)  String playDtmfDirection);
 
 
-    @ApiOperation(value = "View Call", nickname = "callsViewcalldetail", notes = "Retrieve a single voice call’s information by its CallSid.", response = String.class, authorizations = {
+    @ApiOperation(value = "View Call Details", nickname = "callsViewcalldetail", notes = "Retrieve a single voice call’s information by its CallSid.", response = String.class, authorizations = {
         @Authorization(value = "auth")
     }, tags={ "Call", })
     @ApiResponses(value = { 
