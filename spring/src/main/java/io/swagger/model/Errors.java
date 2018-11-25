@@ -16,7 +16,7 @@ import javax.validation.constraints.*;
  * Errors
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-11-25T17:42:47.375Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-11-25T17:53:17.796Z")
 
 public class Errors   {
   @JsonProperty("Error")
